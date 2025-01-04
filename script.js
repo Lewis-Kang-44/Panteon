@@ -1,3 +1,4 @@
+// script.js
 document.addEventListener("DOMContentLoaded", () => {
     const candle1 = document.getElementById("candle1");
     const candle2 = document.getElementById("candle2");
@@ -16,11 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 소원 빌기 버튼 클릭
     wishButton.addEventListener("click", () => {
-        wishSection.classList.remove("hidden");
-        wishButton.style.display = "none";
+        window.location.href = "https://your-payment-page.com"; // 결제 페이지로 이동
     });
 
-    // 소원 제출
+    // 결제 완료 후 소원 입력
     submitWish.addEventListener("click", () => {
         const wishInput = document.getElementById("wishInput").value.trim();
 
@@ -30,10 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const fortunes = [
-            "대길! 오늘은 운이 좋습니다.",
+            "대길! 오늘은 최고의 날입니다.",
             "소길! 평온한 하루를 보낼 것입니다.",
-            "조심! 오늘은 선택에 주의하세요.",
-            "희망! 새로운 기회가 다가옵니다."
+            "조심! 새로운 기회를 유념하세요.",
+            "희망! 긍정적인 변화가 다가옵니다."
         ];
 
         const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];

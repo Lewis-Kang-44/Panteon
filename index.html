@@ -5,20 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>신령한 신전</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <!-- 배경 이미지 섹션 -->
-        <div class="background-container">
-            <img src="shrine.png" alt="신비로운 배경" class="background-image">
+        <!-- 신전 섹션 -->
+        <section class="shrine">
+            <div class="shrine-content">
+                <img src="shrine.png" alt="신의 사진" class="god-image">
+                <div class="candles">
+                    <div id="candle1" class="candle"></div>
+                    <div id="candle2" class="candle"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 소원 빌기 버튼 -->
+        <div class="interaction">
+            <button id="wishButton" class="btn">✨ 소원 빌고 신점 받기 ✨</button>
         </div>
 
-        <!-- 콘텐츠 섹션 -->
-        <div class="content">
-            <h1>신령한 신전</h1>
-            <p>소원을 빌고 신령님의 메시지를 들어보세요.</p>
-            <button class="btn">소원 빌기</button>
+        <!-- 소원 입력 섹션 -->
+        <div id="wishSection" class="hidden">
+            <textarea id="wishInput" placeholder="소원을 적어주세요..."></textarea>
+            <button id="submitWish" class="btn">제출하기</button>
+        </div>
+
+        <!-- 신점 결과 섹션 -->
+        <div id="fortuneSection" class="hidden">
+            <h2>🌕 신령님의 메시지 🌕</h2>
+            <p id="fortuneResult" class="fortune-result"></p>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
