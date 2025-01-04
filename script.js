@@ -30,10 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const fortunes = [
-            "대길! 최고의 날이 될 것입니다.",
-            "소길! 평온하고 안정적인 하루입니다.",
-            "조심! 새로운 선택을 유념하세요.",
-            "기대! 희망찬 변화가 다가옵니다."
+            "대길! 오늘은 운이 좋습니다.",
+            "소길! 평온한 하루를 보낼 것입니다.",
+            "조심! 오늘은 선택에 주의하세요.",
+            "희망! 새로운 기회가 다가옵니다."
         ];
 
         const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
