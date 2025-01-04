@@ -3,48 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="온라인 신전 - 소원을 빌고 신점을 받아보세요">
-    <meta name="keywords" content="신전, 소원, 신점, 촛불, 랜덤 신점">
-    <title>온라인 신전</title>
+    <meta name="description" content="신비로운 신전에서 소원을 빌고 신점을 받아보세요.">
+    <meta name="keywords" content="신전, 신비, 신점, 소원, 동양 신화">
+    <title>신비로운 신전</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <h1>🕯️ 신령한 신전 🕯️</h1>
-        <p>소원을 빌고 신령님의 말씀을 들어보세요</p>
+        <h1>✨ 신령한 동양 신전 ✨</h1>
+        <p>소원을 빌고 신령님의 메시지를 들어보세요.</p>
     </header>
 
     <main class="main-container">
-        <!-- 신전 이미지 -->
+        <!-- 신전 배경 -->
         <section class="shrine">
-            <img src="shrine.jpg" alt="신전 이미지" class="shrine-image">
+            <div class="shrine-background">
+                <img src="shrine.png" alt="신전 배경" class="background-image">
+            </div>
             <div class="candles">
-                <div id="candle1" class="candle" title="왼쪽 촛대"></div>
-                <div id="candle2" class="candle" title="오른쪽 촛대"></div>
+                <div id="candle1" class="candle" title="왼쪽 촛불"></div>
+                <div id="candle2" class="candle" title="오른쪽 촛불"></div>
             </div>
         </section>
 
-        <!-- 소원 빌기 버튼 -->
+        <!-- 인터랙션 섹션 -->
         <section class="interaction">
-            <button id="wishButton" class="btn">소원 빌고 신점 받기</button>
+            <button id="wishButton" class="btn">✨ 소원 빌기 ✨</button>
         </section>
 
         <!-- 소원 입력 섹션 -->
         <section id="wishSection" class="hidden section">
             <h2>소원을 빌어보세요</h2>
-            <textarea id="wishInput" placeholder="여기에 소원을 입력하세요"></textarea>
-            <button id="submitWish" class="btn">제출하기</button>
+            <textarea id="wishInput" placeholder="소원을 입력하세요..."></textarea>
+            <button id="submitWish" class="btn">🙏 제출하기 🙏</button>
         </section>
 
         <!-- 신점 결과 섹션 -->
         <section id="fortuneSection" class="hidden section">
-            <h2>신령님의 말씀</h2>
+            <h2>🌕 신령님의 말씀 🌕</h2>
             <p id="fortuneResult" class="fortune-result"></p>
         </section>
     </main>
 
     <footer class="footer">
-        <p>© 2025 온라인 신전 | 모든 권리 보유</p>
+        <p>© 2025 신령한 동양 신전 | 모든 권리 보유</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="신비로운 신전에서 소원을 빌고 신점을 받아보세요.">
+    <meta name="keywords" content="신전, 신비, 신점, 소원, 동양 신화">
+    <title>신비로운 신전</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>✨ 신령한 동양 신전 ✨</h1>
+        <p>소원을 빌고 신령님의 메시지를 들어보세요.</p>
+    </header>
+
+    <main class="main-container">
+        <!-- 신전 배경 -->
+        <section class="shrine">
+            <div class="shrine-background">
+                <img src="shrine-background.jpg" alt="신전 배경" class="background-image">
+            </div>
+            <div class="candles">
+                <div id="candle1" class="candle" title="왼쪽 촛불"></div>
+                <div id="candle2" class="candle" title="오른쪽 촛불"></div>
+            </div>
+        </section>
+
+        <!-- 인터랙션 섹션 -->
+        <section class="interaction">
+            <button id="wishButton" class="btn">✨ 소원 빌기 ✨</button>
+        </section>
+
+        <!-- 소원 입력 섹션 -->
+        <section id="wishSection" class="hidden section">
+            <h2>소원을 빌어보세요</h2>
+            <textarea id="wishInput" placeholder="소원을 입력하세요..."></textarea>
+            <button id="submitWish" class="btn">🙏 제출하기 🙏</button>
+        </section>
+
+        <!-- 신점 결과 섹션 -->
+        <section id="fortuneSection" class="hidden section">
+            <h2>🌕 신령님의 말씀 🌕</h2>
+            <p id="fortuneResult" class="fortune-result"></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 신령한 동양 신전 | 모든 권리 보유</p>
     </footer>
 
     <script src="script.js"></script>

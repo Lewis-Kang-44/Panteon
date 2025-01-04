@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener("DOMContentLoaded", () => {
     const candle1 = document.getElementById("candle1");
     const candle2 = document.getElementById("candle2");
@@ -31,10 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const fortunes = [
-            "대길! 오늘은 최고의 날입니다!",
-            "소길! 평온한 하루가 될 것입니다.",
-            "조심! 오늘은 운수가 좋지 않습니다.",
-            "희망! 새로운 도전이 필요합니다."
+            "대길! 최고의 날이 될 것입니다.",
+            "소길! 평온하고 안정적인 하루입니다.",
+            "조심! 새로운 선택을 유념하세요.",
+            "기대! 희망찬 변화가 다가옵니다."
         ];
 
         const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];

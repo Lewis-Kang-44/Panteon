@@ -2,121 +2,143 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Noto Sans KR', sans-serif;
-    background: linear-gradient(to bottom, #fde2e4, #f8edea);
-    color: #333;
+    font-family: 'Noto Serif KR', 'Playfair Display', serif;
+    background: linear-gradient(to bottom, #0d1b2a, #1b263b, #415a77);
+    color: #f4f4f4;
     text-align: center;
 }
 
 .header {
-    background-color: #660000;
-    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffd700;
     padding: 20px 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .header h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin: 0;
+    letter-spacing: 2px;
 }
 
 .header p {
     font-size: 1.2rem;
-    margin: 5px 0;
+    margin: 10px 0 0;
 }
 
 .main-container {
     padding: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .shrine {
     position: relative;
-    margin: 20px auto;
-    width: 300px;
+    margin: 30px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-.shrine-image {
+.shrine-background {
+    position: relative;
+    overflow: hidden;
+}
+
+.background-image {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    height: auto;
+    filter: brightness(80%) blur(2px);
+    transition: all 0.3s ease-in-out;
+}
+
+.background-image:hover {
+    filter: brightness(100%) blur(0);
 }
 
 .candles {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     width: 100%;
+    padding: 0 20px;
 }
 
 .candle {
-    width: 30px;
-    height: 60px;
-    background: #ffe4b5;
-    border-radius: 5px;
+    width: 50px;
+    height: 100px;
+    background: linear-gradient(to bottom, #ffe4b5, #ffcc66);
+    border-radius: 10px;
     cursor: pointer;
     position: relative;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.5);
 }
 
 .candle:hover {
-    background: #ffd700;
-    box-shadow: 0 0 15px rgba(255, 165, 0, 0.8);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 165, 0, 0.8);
 }
 
 .candle::after {
     content: '';
     position: absolute;
-    top: -15px;
+    top: -20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 12px;
-    height: 12px;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, orange, red);
     border-radius: 50%;
-    background-color: transparent;
-    box-shadow: 0 0 10px transparent;
-    transition: all 0.5s;
+    box-shadow: 0 0 15px orange, 0 0 30px red;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .candle.lit::after {
-    background-color: orange;
-    box-shadow: 0 0 20px orange, 0 -5px 10px red;
-}
-
-.interaction {
-    margin: 20px 0;
+    opacity: 1;
 }
 
 .btn {
-    background: #660000;
+    background: linear-gradient(to right, #990000, #ff4500);
     color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
-    transition: all 0.3s;
+    box-shadow: 0 6px 15px rgba(255, 69, 0, 0.5);
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: #990000;
-    transform: scale(1.1);
+    background: linear-gradient(to right, #ff4500, #ff6347);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 69, 0, 0.8);
 }
 
 textarea {
     width: 80%;
-    height: 100px;
-    margin: 10px auto;
-    display: block;
-    font-size: 16px;
-    padding: 10px;
-    border: 2px solid #660000;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    height: 120px;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    padding: 15px;
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: #333;
+    font-family: 'Noto Serif KR', serif;
 }
 
 textarea:focus {
     outline: none;
-    border-color: #990000;
+    border-color: #ff4500;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.7);
 }
 
 .hidden {
@@ -124,18 +146,20 @@ textarea:focus {
 }
 
 .section {
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 .fortune-result {
-    font-size: 1.5rem;
-    color: #660000;
+    font-size: 1.8rem;
     font-weight: bold;
+    color: #ffd700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .footer {
-    background-color: #660000;
-    color: white;
-    padding: 10px 0;
-    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #f4f4f4;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 0.9rem;
 }
